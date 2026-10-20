@@ -1,0 +1,13 @@
+{
+  "vaga": "Software Engineer",
+  "candidato": {
+    "first_name": "Teste",
+    "middle_name": "QA",
+    "last_name": "Automacao",
+    "email": "candidato.teste.qa@example.com",
+    "contact_number": "11999990000",
+    "keywords": "qa, testes, playwright",
+    "notes": "Candidatura sintetica gerada pela automacao - nao processar.",
+    "consent": true
+  }
+}
