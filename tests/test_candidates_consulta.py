@@ -36,7 +36,8 @@ def test_lista_de_candidatos_carrega(page: Page, libera_login):
     page.goto("/web/index.php/recruitment/viewCandidates", wait_until="domcontentloaded")
     expect(page.get_by_role("heading", name="Candidates")).to_be_visible(timeout=30_000)
 
-    headers = page.locator(".oxd-table-header .oxd-table-header-cell").all_inner_texts()
+    expect(page.get_by_role("columnheader").first).to_be_visible(timeout=30_000)
+    headers = page.get_by_role("columnheader").all_inner_texts()
     for coluna in ["Vacancy", "Candidate", "Hiring Manager", "Date of Application", "Status"]:
         assert any(coluna in h for h in headers), f"Coluna '{coluna}' não encontrada em {headers}"
 
